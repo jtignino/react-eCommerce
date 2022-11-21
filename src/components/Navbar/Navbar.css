@@ -1,0 +1,5 @@
+.navbar-brand img{
+    width: 35px;
+    margin: 10px 20px;
+    filter: drop-shadow(3px 3px 4px #85858579);
+}

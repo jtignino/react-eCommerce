@@ -1,0 +1,8 @@
+.colorIcon{
+    color:rgba(255, 255, 255, 0.8);
+    transition: color 0.2s;
+}
+
+.colorIcon:hover{
+    color: rgba(255, 255, 255, 1);
+}
