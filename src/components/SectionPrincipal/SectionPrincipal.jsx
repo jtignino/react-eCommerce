@@ -6,7 +6,7 @@ const SectionPrincipal = () => {
         <>
         <div className='position-relative divPrincipal'>
             <section className='container-xl d-flex flex-column w-100 sectionPrincipal'>
-                <h1 className='py-4 py-xxl-5 text-white text-center fs-2 text-uppercase'>Piensa digital</h1>
+                <h1 className='py-4 py-xxl-5 text-white text-center fs-2 text-uppercase'>Piensa <span className=''>digital</span></h1>
                 <CardPresentacion/>   
             </section>
             <div className='position-absolute bottom-0 start-0 svgContainer'>
