@@ -10,10 +10,11 @@
 
 .contadorCarrito{
     font-size: 0.75rem;
-    background-color: #f691b3;
+    font-weight: bold;
+    background: linear-gradient(35deg, rgba(232,176,232,1) 0%, rgba(238,194,255,1) 50%, rgba(254,206,230,1) 100%);
     border-radius: 50%;
-    width: 2em;
-    height: 2em;
+    width: 1.8em;
+    height: 1.8em;
     display: flex;
     justify-content: center;
     align-items: center;
