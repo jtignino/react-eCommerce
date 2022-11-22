@@ -4,16 +4,16 @@
 }
 
 .sectionPrincipal{
-    min-height: 65vh;
+    min-height: 75vh;
     background-image: url(../../../public/profile-pic.png);
-    background-size: 32%;
-    background-position: left 60%;
+    background-size: 35%;
+    background-position: right 60%;
     background-repeat: no-repeat;
 }
 
-.sectionPrincipal h1{
+/* .sectionPrincipal h1{
     text-shadow: 0 1px 2px rgba(0,0,0,.2);
-}
+} */
 
 .svgContainer{
     height: 100px;
