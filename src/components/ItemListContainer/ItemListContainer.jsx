@@ -1,7 +1,7 @@
 const ItemListContainer = ({greeting}) => {
     return (
         <>
-            <p className="container-xxl fw-bold">{greeting}</p>
+            <p className="container-xxl">{greeting}</p>
         </>
     );
 }
