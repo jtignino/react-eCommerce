@@ -24,6 +24,7 @@
     padding: 0.5rem 1.5rem;
     border: none;
     transition: background-color .3s, color .3s;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
 
 .boton:hover{
