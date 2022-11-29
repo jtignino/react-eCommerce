@@ -1,0 +1,44 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+.btnDivGroup{
+    height: min-content;
+    border: 1px solid #f48fb1;
+}
+
+.btnCount{
+    background-color: #f48fb1;
+    background-color: white;
+    color: #f48fb1;
+    border: 1px solid transparent !important;
+    
+}
+
+.btnCount:hover{
+    background-color: white;
+    color: #f48fb1;
+    border: 1px solid transparent !important;
+}
+
+.btnCount:active{
+    color:#ff58e9 !important;
+    border: 1px solid transparent !important;
+}
+
+.btnCount:disabled{
+    border: 1px solid transparent !important;
+}
+
+.inputCount{
+    width: 4rem ;
+    border: none;
+}
+
+.inputCount:focus-visible{
+    border: none;
+}
