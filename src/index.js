@@ -10,3 +10,4 @@ root.render(
   </React.StrictMode>
 );
 
+// el modo estricto me ejecuta dos veces, una es de prueba y la otra es la ejecución normal
