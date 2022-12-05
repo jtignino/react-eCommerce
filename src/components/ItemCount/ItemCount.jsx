@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './ItemCount.css';
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, onAdd}) => {
     const [contador, setContador] = useState(1);
 
     function decrementar2(){
@@ -22,7 +22,7 @@ const ItemCount = ({stock}) => {
         } 
     }
 
-    const agregarCarrito = () => console.log("Me agregaste al carrito");;
+    const agregarCarrito = () => console.log(`Agregaste al carrito la cantidad: ${contador}`);
 
     return (
         <>

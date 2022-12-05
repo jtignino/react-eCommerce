@@ -1,9 +1,9 @@
 import Item from "../Item/Item";
 
-const ItemList = ({productList}) => {
+const ItemList = ({productsList}) => {
     return (
         <div className="row justify-content-between mx-auto">
-            {productList.map(producto => <Item key={producto.id} prod={producto}/>)}
+            {productsList.map(producto => <Item key={producto.id} prod={producto}/>)}
         </div>
     );
 }
