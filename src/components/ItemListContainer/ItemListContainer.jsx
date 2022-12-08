@@ -1,4 +1,3 @@
-import ItemCount from "../ItemCount/ItemCount";
 import ItemList from "../ItemList/ItemList";
 import consultarBDD from "../../assets/funciones";
 import { useState, useEffect } from "react";
@@ -10,16 +9,19 @@ const ItemListContainer = ({}) => {
 
     useEffect(() => {
         if (category) {
-            consultarBDD('../json/productos.json').then(products => {
-                const productsList= products.filter(prod => prod.stock > 0).filter(prod => prod.idCategoria === parseInt(category))
+            document.title = `${category} | Piensa Digital`;
+            consultarBDD('../json/catalogo.json').then(products => {
+                const productsList= products.filter(prod => prod.stock > 0).filter(prod => prod.idCategoria === category)
                 const cardProductos = ItemList({productsList})
                 setProductos(cardProductos)
             })
         } else {
-            consultarBDD('./json/productos.json').then(products => {
+            document.title = `Piensa Digital`;
+            consultarBDD('./json/catalogo.json').then(products => {
                 const productsList= products.filter(prod => prod.stock > 0)
                 const cardProductos = ItemList({productsList})
                 setProductos(cardProductos)
+                console.log(cardProductos);
             })
         }
     }, [category]);

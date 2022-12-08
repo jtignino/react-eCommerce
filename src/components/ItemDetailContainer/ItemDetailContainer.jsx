@@ -8,7 +8,7 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
 
     useEffect(() => {
-        consultarBDD('../json/productos.json').then(productos => {
+        consultarBDD('../json/catalogo.json').then(productos => {
             const prod = productos.find(product => product.id === parseInt(id));
             setProducto(prod);
         })

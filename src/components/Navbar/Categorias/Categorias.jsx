@@ -7,13 +7,13 @@ const Categorias = () => {
                 <Link className="nav-link" to={'/'}>Inicio</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to={'/category/1'}>Servicios</Link>
+                <Link className="nav-link" to={'/category/servicios'}>Servicios</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to={'/category/2'}>Cursos</Link>
+                <Link className="nav-link" to={'/category/cursos'}>Cursos</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to={'/category/3'}>Herramientas</Link>
+                <Link className="nav-link" to={'/category/herramientas'}>Herramientas</Link>
             </li>
         </ul>
     );
