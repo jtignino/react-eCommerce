@@ -1,5 +1,10 @@
 import ItemCount from "../ItemCount/ItemCount";
 const ItemDetail = ({ item }) => {
+    
+    const onAdd = (contador) => {
+        console.log(contador);
+    }
+
     return (
         <div className="card mb-5 pb-1" style={{ maxWidth: '600px' }}>
             <div className="row g-0">
@@ -11,7 +16,7 @@ const ItemDetail = ({ item }) => {
                         <h5 className="card-title">{item.nombre} {item.modelo}</h5>
                         <p className="card-text">Precio: ${new Intl.NumberFormat('de-DE').format(item.precio)}</p>
                         <p className="card-text">Stock: {item.stock}</p>
-                        <ItemCount stock={item.stock}/>
+                        <ItemCount stock={item.stock} onAdd={onAdd} inicial={1}/>
                         <button className="d-grid btn btn-secondary my-3">Finalizar compra</button>
                     </div>
                 </div>

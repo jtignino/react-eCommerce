@@ -1,5 +1,6 @@
 import Categorias from "./Categorias/Categorias";
 import CartWidget from "../CartWidget/CartWidget";
+import BtnDarkMode from "./BtnDarkMode/BtnDarkMode";
 import './Navbar.css';
 import { Link } from "react-router-dom";
 
@@ -13,8 +14,9 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse justify-content-end">
                     <Categorias/>
+                    <CartWidget/>
+                    <BtnDarkMode/>
                 </div>
-                <CartWidget/>
             </div>
         </nav>
     );

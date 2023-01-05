@@ -9,7 +9,7 @@ const SectionPrincipal = () => {
                 <div className='bgImage'></div>
             </section>
             <div className='position-absolute bottom-0 start-0 svgContainer'>
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{height: "100%", width: "100%",}}><path d="M-2.54,66.60 C149.83,-42.92 285.83,141.60 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style={{stroke: "none", fill: "#ffffff",}}></path></svg>
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{height: "100%", width: "100%",}}><path d="M-2.54,66.60 C149.83,-42.92 285.83,141.60 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style={{stroke: "none", fill: "#f5f5f5",}}></path></svg>
             </div>
         </div>     
     );

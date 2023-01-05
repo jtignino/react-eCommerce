@@ -1,10 +1,10 @@
 import { useState } from "react";
 import './ItemCount.css';
 
-const ItemCount = ({stock, onAdd}) => {
-    const [contador, setContador] = useState(1);
+const ItemCount = ({stock, onAdd, inicial}) => {
+    const [contador, setContador] = useState(inicial);
 
-    function decrementar2(){
+    function decrementar(){
         if (contador > 1) {
             document.getElementById("minus").disabled = false;
             document.getElementById("plus").disabled = false;
@@ -13,7 +13,7 @@ const ItemCount = ({stock, onAdd}) => {
         } 
     }
 
-    function incrementar2() {
+    function incrementar() {
         if (contador < stock) {
             document.getElementById("plus").disabled = false;
             document.getElementById("minus").disabled = false;
@@ -22,16 +22,16 @@ const ItemCount = ({stock, onAdd}) => {
         } 
     }
 
-    const agregarCarrito = () => console.log(`Agregaste al carrito la cantidad: ${contador}`);
+    const agregarCarrito = () => onAdd(contador);
 
     return (
         <>
         <div className="btn-group btnDivGroup" role="group" aria-label="">
-            <button disabled={contador === 1} type="button" className="btn btnCount" id="minus" onClick={() => decrementar2()}><i className="fa-solid fa-minus"></i></button>
+            <button disabled={contador === 1} type="button" className="btn btnCount" id="minus" onClick={decrementar}><i className="fa-solid fa-minus"></i></button>
             <input type="number" className="text-center inputCount" value={contador} />
-            <button type="button" className="btn btnCount" id="plus" onClick={() => incrementar2()}><i className="fa-solid fa-plus"></i></button> 
+            <button type="button" className="btn btnCount" id="plus" onClick={incrementar}><i className="fa-solid fa-plus"></i></button> 
         </div>
-        <button type="button" className="btn btn-outline-secondary ms-5" onClick={() => agregarCarrito()}>Agregar al carrito</button>
+        <button type="button" className="btn btn-outline-secondary ms-5" onClick={agregarCarrito}>Agregar al carrito</button>
         </>
     );
 }
