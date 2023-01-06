@@ -1,10 +1,10 @@
 import { useContext, useState, createContext } from "react";
 
-const carritoContext = createContext();
+const CarritoContext = createContext();
 
-export const useCarritoContext = useContext(carritoContext);
+export const useCarritoContext = () => useContext(CarritoContext);
 
-export const carritoProvider = (props) => {
+export const CarritoProvider = (props) => {
     const [carrito, setCarrito] = useState([]);
 
     const isInCart = (id) => {
@@ -22,4 +22,22 @@ export const carritoProvider = (props) => {
             setCarrito([...carrito, nuevoProducto]);
         }            
     }
+
+    const emptyCart = () => setCarrito([]);
+    
+    const removeItem = (id) => setCarrito(carrito.filter(prod => prod.id !== id));
+
+    const getItemQuantity = () => {
+        return carrito.reduce((acc, prod) => acc += prod.cant, 0);
+    }
+    
+    const totalPrice = () => {
+        return carrito.reduce((acc, prod) => acc += (prod.cant * prod.precio), 0)
+    }
+
+    return (
+        <CarritoContext.Provider value={{carrito, isInCart, addItem, emptyCart, removeItem, getItemQuantity, totalPrice}}>
+            {props.children}
+        </CarritoContext.Provider>
+    )
 }
