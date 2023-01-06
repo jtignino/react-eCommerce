@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-end">
                     <Categorias/>
                     <CartWidget/>
-                    <BtnDarkMode/>
+                    {/* <BtnDarkMode/> */}
                 </div>
             </div>
         </nav>

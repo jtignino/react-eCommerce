@@ -1,8 +1,11 @@
 import ItemCount from "../ItemCount/ItemCount";
+import { useCarritoContext } from "../../context/CarritoContext";
+
 const ItemDetail = ({ item }) => {
-    
+    const {addItem} = useCarritoContext();
+
     const onAdd = (contador) => {
-        console.log(contador);
+        addItem(item, contador);
     }
 
     return (
@@ -22,7 +25,7 @@ const ItemDetail = ({ item }) => {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
 export default ItemDetail;

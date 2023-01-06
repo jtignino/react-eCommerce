@@ -15,7 +15,7 @@ const CartWidget = () => {
                 
             </div>
         </ul>
-    );
+    )
 }
 
 export default CartWidget;
