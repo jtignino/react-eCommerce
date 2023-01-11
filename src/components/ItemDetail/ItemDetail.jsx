@@ -1,5 +1,6 @@
 import ItemCount from "../ItemCount/ItemCount";
 import { useCarritoContext } from "../../context/CarritoContext";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
     const {addItem} = useCarritoContext();
@@ -16,11 +17,11 @@ const ItemDetail = ({ item }) => {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">{item.nombre} {item.modelo}</h5>
+                        <h5 className="card-title">{item.nombre}</h5>
                         <p className="card-text">Precio: ${new Intl.NumberFormat('de-DE').format(item.precio)}</p>
                         <p className="card-text">Stock: {item.stock}</p>
                         <ItemCount stock={item.stock} onAdd={onAdd} inicial={1}/>
-                        <button className="d-grid btn btn-secondary my-3">Finalizar compra</button>
+                        <Link className="nav-link" to={"/cart"}><button className="d-grid btn btn-secondary my-3">Finalizar compra</button></Link>
                     </div>
                 </div>
             </div>

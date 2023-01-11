@@ -1,4 +1,5 @@
 import ItemList from "../ItemList/ItemList";
+import SectionPrincipal from "../SectionPrincipal/SectionPrincipal";
 import consultarBDD from "../../assets/funciones";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -21,7 +22,7 @@ const ItemListContainer = ({}) => {
                 const productsList= products.filter(prod => prod.stock > 0)
                 const cardProductos = ItemList({productsList})
                 setProductos(cardProductos)
-                console.log(cardProductos);
+                // console.log(cardProductos);
             })
         }
     }, [category]);
@@ -31,9 +32,12 @@ const ItemListContainer = ({}) => {
     // Con esto (el useEffect) le estoy diciendo a mi app cuándo tengo que hacer uso del asincronismo. Esto surge de que si no utilizo el useEffect, hace la consulta todo el tiempo porque es una función asincrónica.
 
     return (
-        <div className="container-xl">
-            {productos}
-        </div>
+        <>
+            <SectionPrincipal/>
+            <div className="container-xl">
+                {productos}
+            </div>
+        </>
     );
 }
 

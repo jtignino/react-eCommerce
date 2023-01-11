@@ -20,7 +20,7 @@ const App = () => {
       <BrowserRouter>
         <DarkModeProvider>
           <Navbar/>
-          <SectionPrincipal/>
+          {/* <SectionPrincipal/> */}
           <Routes>
             <Route path='/' element={<ItemListContainer/>}/>
             <Route path='/product/:id' element={<ItemDetailContainer/>}/>  

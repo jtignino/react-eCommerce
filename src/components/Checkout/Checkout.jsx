@@ -11,8 +11,15 @@ const Checkout = () => {
         console.log(datForm);
         const cliente = Object.fromEntries(datForm);
         console.log(cliente);
-        e.target.reset();
-        navigate("/");
+        console.log(cliente.email);
+        if (cliente.email === cliente.emailDos) {
+            console.log("bien!");
+            e.target.reset();
+            navigate("/");
+        } else {
+            console.log("mal!"); 
+        }
+        
     }
 
     return (
@@ -27,6 +34,10 @@ const Checkout = () => {
                     <input type="email" className="form-control" name="email" />
                 </div>
                 <div className="mb-3">
+                    <label htmlFor="emailDos" className="form-label">Repetir Email</label>
+                    <input type="email" className="form-control" name="emailDos" />
+                </div>
+                <div className="mb-3">
                     <label htmlFor="dni" className="form-label">DNI</label>
                     <input type="number" className="form-control" name="dni" />
                 </div>
@@ -38,9 +49,8 @@ const Checkout = () => {
                     <label htmlFor="direccion" className="form-label">Dirección</label>
                     <input type="text" className="form-control" name="direccion" />
                 </div>
-                <button type="submit" className="btn btn-primary">Finalizar Compra</button>
+                <button type="submit" className="btn btn-secondary">Finalizar compra</button>
             </form>
-
         </div>
     );
 }
