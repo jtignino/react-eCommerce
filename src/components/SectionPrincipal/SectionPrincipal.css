@@ -1,6 +1,6 @@
 .divPrincipal{
     background-color: #fecee6;
-    background: linear-gradient(35deg, rgba(232,176,232,1) 0%, rgba(238,194,255,1) 50%, rgba(254,206,230,1) 100%);
+    background: linear-gradient(35deg, rgb(195, 106, 195) 0%, rgb(226, 154, 255) 55%, rgba(254,206,230,1) 100%);
 }
 
 .sectionPrincipal{

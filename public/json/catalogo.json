@@ -5,7 +5,7 @@
       "nombre": "Asesoría digital personalizada",
       "precio": 20000,
       "stock": 12,
-      "img": "asesoria_digital.png"
+      "img": "https://firebasestorage.googleapis.com/v0/b/react-ecommerce-a469b.appspot.com/o/asesoria_digital.png?alt=media&token=a7c6ef00-a935-4510-a13e-e0c1e9a035c1"
    },
    {
       "id": 2,
@@ -13,7 +13,7 @@
       "nombre": "Manejo de campañas publicitarias",
       "precio": 30000,
       "stock": 4,
-      "img": "campañas_publicitarias.png"
+      "img": "https://firebasestorage.googleapis.com/v0/b/react-ecommerce-a469b.appspot.com/o/campa%C3%B1as_publicitarias.png?alt=media&token=387695a0-52eb-4eb2-b9e7-6f3ca146fd05"
    },
    {
       "id": 3,
@@ -21,7 +21,7 @@
       "nombre": "Consultoría de publicidad digital",
       "precio": 4000,
       "stock": 2,
-      "img": "consultoria_digital.png"
+      "img": "https://firebasestorage.googleapis.com/v0/b/react-ecommerce-a469b.appspot.com/o/consultoria_digital.png?alt=media&token=24fe41f3-feef-467e-938e-fc65e4d74c33"
    },
    {
       "id": 4,
@@ -29,7 +29,7 @@
       "nombre": "Kit creador",
       "precio": 2800,
       "stock": 20,
-      "img": "kit_creador.png"
+      "img": "https://firebasestorage.googleapis.com/v0/b/react-ecommerce-a469b.appspot.com/o/kit_creador.png?alt=media&token=10dc51ed-c0cf-4815-af5b-95d38e28e430"
    },
    {
       "id": 5,
@@ -37,7 +37,7 @@
       "nombre": "Kit diseño",
       "precio": 1600,
       "stock": 20,
-      "img": "kit_diseño.png"
+      "img": "https://firebasestorage.googleapis.com/v0/b/react-ecommerce-a469b.appspot.com/o/kit_dise%C3%B1o.png?alt=media&token=5463b456-ef0f-4f1a-8a94-e4a157307421"
    },
    {
       "id": 6,
@@ -45,6 +45,6 @@
       "nombre": "E-book Baúl Creativo",
       "precio": 500,
       "stock": 50,
-      "img": "baul_creativo.png"
+      "img": "https://firebasestorage.googleapis.com/v0/b/react-ecommerce-a469b.appspot.com/o/baul_creativo.png?alt=media&token=0e0245d0-7dd0-404a-9929-aefed209cd22"
    }
 ]

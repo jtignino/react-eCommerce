@@ -1,8 +1,9 @@
 import ItemList from "../ItemList/ItemList";
 import SectionPrincipal from "../SectionPrincipal/SectionPrincipal";
-import consultarBDD from "../../assets/funciones";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { getProductos } from "../../assets/firebase";
+// import consultarBDD from "../../assets/funciones";
 
 const ItemListContainer = ({}) => {
     const [productos, setProductos] = useState([]);
@@ -11,20 +12,26 @@ const ItemListContainer = ({}) => {
     useEffect(() => {
         if (category) {
             document.title = `${category} | Piensa Digital`;
-            consultarBDD('../json/catalogo.json').then(products => {
+            getProductos().then(products => {
                 const productsList= products.filter(prod => prod.stock > 0).filter(prod => prod.idCategoria === category)
                 const cardProductos = ItemList({productsList})
                 setProductos(cardProductos)
             })
         } else {
             document.title = `Piensa Digital`;
-            consultarBDD('./json/catalogo.json').then(products => {
+            getProductos().then(products => {
                 const productsList= products.filter(prod => prod.stock > 0)
                 const cardProductos = ItemList({productsList})
                 setProductos(cardProductos)
-                // console.log(cardProductos);
             })
         }
+        // getProductos().then(prod => console.log(prod));
+        // getProducto("2Doc6yJRM46Q1tnxsvOq").then(prod => {
+        //     prod.stock -= 10
+        //     delete prod.id
+        //     updateProducto("2Doc6yJRM46Q1tnxsvOq", prod).then(estado => console.log(estado))
+        // }); 
+
     }, [category]);
     
     // si pongo [] se ejecuta cuando sucede un cambio en todo el array (o sea, cuando se llene). Yo en este caso tengo que consultar la BDD una sola vez.
