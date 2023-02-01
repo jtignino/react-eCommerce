@@ -20,6 +20,7 @@ const Checkout = () => {
                 getProducto(productoEnCarrito.id).then(prodEnBDD => {
                     if (prodEnBDD.stock >= productoEnCarrito.cant) {
                         prodEnBDD.stock -= productoEnCarrito.cant;
+                        delete prodEnBDD.id;
                         updateProducto(productoEnCarrito.id, prodEnBDD);    
                     } else {
                         toast.error(`El producto ${prodEnBDD.nombre} no posee stock suficiente.`);                    
